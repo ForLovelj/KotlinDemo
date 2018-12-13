@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KotlinDemo</string>
+
+    <string name="title_video">视频</string>
+    <string name="title_forum">论坛</string>
+    <string name="title_music">音乐</string>
+    <string name="title_photo">图片</string>
+    <string name="title_me">我的</string>
+</resources>

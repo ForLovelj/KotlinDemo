@@ -1,0 +1,21 @@
+package com.alex.kotlindemo.main
+
+import com.alex.kotlindemo.base.IBasePresenter
+import com.alex.kotlindemo.base.IBaseView
+
+/**
+ * Created by dth
+ * Des:
+ * Date: 2018/12/12.
+ */
+interface MainContract {
+
+
+    interface View : IBaseView{
+
+    }
+
+   interface Presenter : IBasePresenter<View>{
+
+   }
+}

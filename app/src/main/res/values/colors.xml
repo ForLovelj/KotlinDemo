@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="floating_action_button_tine_bg_color">@color/white</color>
+    <color name="bottom_navigation_bar_active">@color/colorPrimary</color>
+    <color name="bottom_navigation_bar_background">@color/white</color>
+    <color name="LightGray">#aFFFFFFF</color>
+    <color name="green">#5ACC87</color>
+    <color name="lightred">#FE5442</color>
+    <color name="yeloo">#ffba00</color>
+</resources>
