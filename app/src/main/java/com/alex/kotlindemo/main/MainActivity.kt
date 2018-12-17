@@ -21,12 +21,11 @@ import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.Permission
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-
-
-
-
-
+/**
+ * Created by dth
+ * Des:
+ * Date: 2018/12/5.
+ */
 class MainActivity : BaseActivity<MainContract.Presenter, MainContract.View>(), MainContract.View {
 
     private var fragmentManager: FragmentManager? = null

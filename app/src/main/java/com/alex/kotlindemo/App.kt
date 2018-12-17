@@ -12,18 +12,15 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        mContext = this
+        appContext = applicationContext
     }
 
     /**
      * 伴生类
      */
     companion object {
+        var appContext: Context? = null
 
-        private var mContext: App? = null
-
-        val appContext: Context?
-            get() = mContext
     }
 
 }

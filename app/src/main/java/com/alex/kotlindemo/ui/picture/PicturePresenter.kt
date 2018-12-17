@@ -21,7 +21,7 @@ class PicturePresenter : BasePresenter<PictureContract.View>(),PictureContract.P
             page = 1
         }
         mView?.showLoadingView("")
-        AppDataManager.instence.listDouBanMeiZhi(categoryId,page,pullToRefresh)
+        AppDataManager.instance.listDouBanMeiZhi(categoryId,page,pullToRefresh)
                 .compose(RxSchedulersHelper.ioMainThread())
                 .subscribe(object : BaseObserver<List<DouBanMeizi>>(mView!!){
 

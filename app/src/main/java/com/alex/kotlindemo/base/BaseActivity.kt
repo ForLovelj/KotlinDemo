@@ -24,10 +24,6 @@ abstract class BaseActivity<T : IBasePresenter<V>,V : IBaseView> : AppCompatActi
     protected val presenter: T
         get() {
             return mPresenter ?: throw RuntimeException("presenter cannot be initialized!")
-//            if (mPresenter == null) {
-//                throw RuntimeException("presenter cannot be initialized!")
-//            }
-//            return mPresenter as T
         }
 
 

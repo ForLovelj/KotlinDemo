@@ -17,6 +17,9 @@ public class AppCacheUtils {
     private final static String RX_CACHE_DIR = "/rx_cache";
     private final static String VIDEO_CACHE_DIR = "/video_cache";
     private final static String GLIDE_DIS_CACHE_DIR = "/glide_cache_dir";
+    private static final String ROOT_FOLDER = Environment.getExternalStorageDirectory() + "/KotlinDemo/";
+    public static final String DOWNLOAD_VIDEO_PATH = ROOT_FOLDER + "video/";
+    public static final String DOWNLOAD_IMAGE_PATH = ROOT_FOLDER + "image/";
 
     /**
      * 获取RxCache 缓存目录

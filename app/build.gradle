@@ -60,11 +60,17 @@ dependencies {
     kapt 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
 
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    //toast
     implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+    //dialog
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    //animator
+    implementation 'com.github.florent37:viewanimator:1.1.0'
     // jsoup HTML parser library @ https://jsoup.org/
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
     implementation 'com.yanzhenjie:permission:2.0.0-rc12'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

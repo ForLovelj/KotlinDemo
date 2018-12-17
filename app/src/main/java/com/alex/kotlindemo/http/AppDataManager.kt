@@ -28,29 +28,18 @@ class AppDataManager private constructor() : IDataManager {
     private val mCacheProviders: CacheProviders
 
     init {
-        mIApi = Net.instence.create()
+        mIApi = Net.instance.create()
         mCacheProviders = RxCache.Builder()
                 .persistence(AppCacheUtils.getRxCacheDir(App.appContext), GsonSpeaker())
                 .using(CacheProviders::class.java)
     }
 
     companion object {
-
-
-        private var mAppDataManager: AppDataManager? = null
-
-        val instence: AppDataManager
-            get() {
-                if (mAppDataManager == null) {
-                    synchronized(this) {
-                        if (mAppDataManager == null) {
-                            mAppDataManager = AppDataManager()
-                        }
-                    }
-                }
-                return mAppDataManager!!
-            }
+        val instance: AppDataManager by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+            AppDataManager()
+        }
     }
+
 
     override fun getApi(): IApi = mIApi
 
@@ -69,4 +58,5 @@ class AppDataManager private constructor() : IDataManager {
                 }
                 .map{s -> ParseDouBanMeiZi.JsoupDoubanMeizi(s, cid)}
     }
+
 }

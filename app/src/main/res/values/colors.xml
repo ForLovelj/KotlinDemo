@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="floating_action_button_tine_bg_color">@color/white</color>
     <color name="bottom_navigation_bar_active">@color/colorPrimary</color>
     <color name="bottom_navigation_bar_background">@color/white</color>

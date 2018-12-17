@@ -90,24 +90,17 @@ class Net private constructor() {
 
     companion object {
 
-        private var mNet: Net? = null
         private var mRetrofit: Retrofit? = null
         private val API_BASE_URL = "http://www.dbmeinv.com/"
-        private val CONNECT_TIME_OUT = 15
-        private val WRITE_TIME_OUT = 15
-        private val READ_TIME_OUT = 15
+        private const val CONNECT_TIME_OUT = 15
+        private const val WRITE_TIME_OUT = 15
+        private const val READ_TIME_OUT = 15
 
-        val instence: Net
-            get() {
-                if (mNet == null) {
-                    synchronized(this) {
-                        if (mNet == null) {
-                            mNet = Net()
-                        }
-                    }
-                }
-                return mNet!!
-            }
+        val instance = NetHolder.holder
+
+        private object NetHolder {
+            val holder= Net()
+        }
 
         private val REWRITE_CACHE_CONTROL_INTERCEPTOR = Interceptor { chain ->
             val request = chain.request()

@@ -8,6 +8,7 @@ import com.alex.kotlindemo.Adapter.DouBanAdapter
 import com.alex.kotlindemo.R
 import com.alex.kotlindemo.base.BaseFragment
 import com.alex.kotlindemo.model.DouBanMeizi
+import com.alex.kotlindemo.ui.picture.preview.ImagePreActivity
 import com.sdsmdg.tastytoast.TastyToast
 import kotlinx.android.synthetic.main.fragment_picture.*
 
@@ -39,6 +40,11 @@ class PictureFragment : BaseFragment<PictureContract.Presenter, PictureContract.
         mDouBanAdapter.setOnLoadMoreListener({
             mPresenter?.listDouBanMeiZhi(mType!!,false)
         },recyclerView)
+
+        mDouBanAdapter.setOnItemClickListener { adapter, view, position ->
+            val douBanMeizi = mDouBanAdapter.data[position]
+            ImagePreActivity.startActivity(activity!!,view,douBanMeizi.url,douBanMeizi.title)
+        }
     }
 
     override fun tellMeLayout(): Int {

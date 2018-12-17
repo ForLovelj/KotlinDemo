@@ -3,7 +3,6 @@ package com.alex.kotlindemo.ui.picture
 import android.support.v4.app.Fragment
 import com.alex.kotlindemo.Adapter.MyFragmentPagerAdapter
 import com.alex.kotlindemo.main.fragment.BaseMainFragment
-import com.alex.kotlindemo.utils.VLog
 
 /**
  * Created by dth
@@ -17,12 +16,11 @@ class MainDouBanFragment : BaseMainFragment() {
 
     override fun initFragmentAdapter(): MyFragmentPagerAdapter {
 
-        val fragmentList = ArrayList<Fragment>()
+        val fragmentList = mutableListOf<Fragment>()
         for (value in DOUBAN_MEIZI_VALUE) {
             fragmentList.add(PictureFragment.instance(value))
         }
 
-        VLog.d("fragmentList: %s",fragmentList.size)
         return MyFragmentPagerAdapter(childFragmentManager,fragmentList,DOUBAN_MEIZI_NAME)
     }
 }
